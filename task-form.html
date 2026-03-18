@@ -19,6 +19,39 @@
 </script>
 
 <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-content {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  #main {
+    height: 100%;
+  }
+
+  .worker-task {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .task-response-submission {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
   .gondor-wysiwyg h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #1a202c; }
   .gondor-wysiwyg h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; }
   .gondor-wysiwyg p { margin-bottom: 1rem; line-height: 1.5; color: #4a5568; }
@@ -70,7 +103,8 @@
   .split-layout {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 100px);
+    flex: 1 1 auto;
+    min-height: 0;
     width: 100%;
     overflow: hidden;
   }
@@ -79,7 +113,9 @@
     min-width: 300px;
     flex: 0 0 auto;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
   }
 
   .splitter {
@@ -443,7 +479,7 @@
               <li><strong>Allowed Timeframe:</strong> Filings published from October 2023 or more recent.</li>
             </ul>
             <div class="tw-mt-4 tw-p-3 tw-bg-red-50 tw-rounded-md tw-border tw-border-red-100">
-              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or companies are grounds for removal from this project, so please, make sure to respect ALL of your assignments</p>
+              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or companies are grounds for removal from this project, so please, make sure to respect ALL of your assignments.</p>
             </div>
           </div>
         </div>
@@ -780,3 +816,5 @@
 </script>
 </body>
 </html>
+
+

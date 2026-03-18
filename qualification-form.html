@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html class="website-dataannotation_tech">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Project Midas - Qualification Exam</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<!-- Core CSS to retain DA styling -->
+<link rel="stylesheet" href="https://dwuve4jqqfp9f.cloudfront.net/vite/assets/CbBIbuP1.css" media="screen">
+<link rel="stylesheet" href="https://dwuve4jqqfp9f.cloudfront.net/vite/assets/D-qcDshY.css" media="screen">
+<link rel="stylesheet" href="https://dwuve4jqqfp9f.cloudfront.net/vite/assets/DHDDEiGE.css" media="screen">
+<link rel="stylesheet" href="https://dwuve4jqqfp9f.cloudfront.net/vite/assets/CunJNsTe.css" media="screen">
+<link rel="stylesheet" href="https://dwuve4jqqfp9f.cloudfront.net/vite/assets/BVFMGJC7.css" media="screen">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    prefix: 'tw-',
+  }
+</script>
+
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-content {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  #main {
+    height: 100%;
+  }
+
+  .worker-task {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .task-response-submission {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gondor-wysiwyg h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #1a202c; }
+  .gondor-wysiwyg h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; }
+  .gondor-wysiwyg p { margin-bottom: 1rem; line-height: 1.5; color: #4a5568; }
+  .gondor-wysiwyg ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+  .gondor-wysiwyg ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+  .gondor-wysiwyg li { margin-bottom: 0.5rem; }
+  .gondor-wysiwyg mark { background-color: #fef08a; padding: 0.1em 0.3em; border-radius: 0.25rem; }
+  .input-base { transition: border-color 0.2s; outline: none; }
+  .input-base:focus { border-color: #3b82f6; box-shadow: 0 0 0 1px #3b82f6; }
+  
+  table.da-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9rem; }
+  table.da-table th, table.da-table td { border: 1px solid #e2e8f0; padding: 0.75rem; vertical-align: top; }
+  table.da-table th { background-color: #f7fafc; font-weight: 600; text-align: left; }
+  .hl-yellow { background-color: #f6e6a8; padding: 0 0.15em; }
+  .hl-blue { background-color: #dbeafe; padding: 0 0.15em; }
+  .hl-green { background-color: #d9f0d0; padding: 0 0.15em; }
+  .hl-pink { background-color: #f7d9d9; padding: 0 0.15em; }
+  .hl-purple { background-color: #e8e1fb; padding: 0 0.15em; }
+  .hl-gray { background-color: #e2e8f0; padding: 0 0.15em; }
+  .hl-critical { background-color: #ffe39a; color: #ff2d00; font-weight: 700; padding: 0 0.15em; }
+
+  .collapsible-h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .collapsible-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #111827;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .is-collapsed .collapsible-icon {
+    transform: rotate(-90deg);
+  }
+
+  .collapsible-content {
+    margin-top: 0.75rem;
+  }
+
+  .split-layout {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .split-pane {
+    min-width: 300px;
+    flex: 0 0 auto;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+  }
+
+  .splitter {
+    width: 12px;
+    flex: 0 0 12px;
+    cursor: col-resize;
+    position: relative;
+    background: #f3f4f6;
+    border-left: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    user-select: none;
+    touch-action: none;
+  }
+
+  .splitter::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 48px;
+    border-radius: 9999px;
+    background: #9ca3af;
+  }
+</style>
+</head>
+<body class="tw-bg-gray-50">
+
+<!-- Top Navbar Mockup -->
+<div class="navbar navbar-dark navbar-inverse navbar-expand-sm bg-primary tw-bg-blue-600 tw-p-3" id="main-navbar">
+  <div class="tw-text-white tw-font-bold tw-text-xl tw-px-4">DataAnnotation</div>
+</div>
+
+<div class="d-flex justify-content-center flex-grow-1 flex-shrink-1" id="main-content">
+<div class="col-12" id="main">
+
+<div class="worker-task">
+<ol class="breadcrumb tw-p-4 tw-text-sm tw-text-gray-500">
+  <li class="breadcrumb-item">Projects / Midas - Qualification Exam</li>
+</ol>
+
+<div class="task-response-submission tw-px-4">
+  <div id="split-layout" class="split-layout">
+    
+    <!-- LEFT PANE: INSTRUCTIONS -->
+    <div id="left-pane" class="split-pane tw-pr-2" style="flex-basis: 35%;">
+      <div class="tw-my-2 tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-6 gondor-wysiwyg">
+        
+        <h3 class="tw-text-blue-700">PROJECT OVERVIEW</h3>
+        <p>Welcome to the Midas Qualification Exam! The purpose of this project is to create prompt-answer pairs along with self-contained, traceable supporting facts and rationales based on SEC filings.</p>
+        
+        <hr class="tw-my-6"/>
+
+        <h3 class="tw-text-blue-700">GROUND RULES</h3>
+        
+        <li><strong><span class="hl-critical">NO LLMs:</span></strong> No external AI is allowed to assist with any portion of this task.</li>
+        <li><strong><span class="hl-pink">No PII:</span></strong> Do not include any personally identifiable information of ordinary employees or private individuals.</li>
+        
+        <hr class="tw-my-6"/>
+
+        <h3 class="tw-text-blue-700">DEFINITIONS</h3>
+        
+        <p><strong><span class="hl-green">Simple Prompt</span></strong>: a simple question that can be directly extracted from the document.</p>
+        <p><strong><span class="hl-pink">Complex Prompt</span></strong>: a complex question that involves logical reasoning, computing numbers, etc.</p>
+        <p><strong><span class="hl-blue">Factual Prompt</span></strong>: is a question whose answer MUST be present in the document. Depending on the type of prompt you were assigned, it can be:</p>
+        <p><strong><span class="hl-purple">Perfect Answer</span></strong>: An answer that perfectly addresses your prompt. Must be standalone, complete sentences, and self-contained. Percentages must be rounded to the nearest first decimal place and money figures to the nearest integer.</p>
+        <p><strong><span class="hl-yellow">Supporting Facts</span></strong>: that were used to write your <span class="hl-purple">Perfect Answer</span> and their full <span class="hl-pink">Location</span> in the document. They must be 100% verbatim copy-pasted from the PDF. Note: the only exception for non-verbatim contents is, when copying from a table, you can use brackets â€˜[ ]â€™ to add column headers for context.</p>
+        <p><strong><span class="hl-gray">Rationale</span></strong>: Itâ€™s where you provide all steps taken to get to your <span class="hl-purple">Perfect Answer</span>. They must be detailed, include all utilized formulas and reference your <span class="hl-yellow">Supporting Facts</span> and Documents (if two or more are given).</p>
+
+      </div>
+    </div>
+
+    <div id="pane-splitter" class="splitter" role="separator" aria-orientation="vertical" aria-label="Resize panels"></div>
+
+    <!-- RIGHT PANE: FORM WORKFLOW -->
+    <div id="right-pane" class="split-pane tw-pl-4" style="flex-basis: 65%;">
+      <div class="tw-pb-20">
+
+        <!-- QUESTION 1 -->
+        <div class="tw-relative tw-mb-6">
+          <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
+            <h3 class="tw-text-xl tw-font-bold tw-text-indigo-600 tw-mb-4">QUESTION 1</h3>
+            
+            <!-- 1a -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">1a. Write Your Prompt</h4>
+              <p class="tw-text-gray-700 tw-mb-2"><strong>Document Provided:</strong> <a href="#" class="tw-text-blue-600 hover:tw-underline">[Link to Apple Inc. 2022 10-K PDF]</a></p>
+              <p class="tw-text-gray-700 tw-mb-3">Write a single <span class="hl-green">Simple Prompt</span> whose answer can be retrieved directly from one specific place in the document, without doing any math or combining information from multiple sections. The question must be strictly financial/accounting-related and have one clear correct answer.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your simple financial prompt here"></textarea>
+            </div>
+
+            <!-- 1b -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">1b. Provide the <span class="hl-purple">Perfect Answer</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Now answer the prompt you just wrote using the provided document. (Remember: Your answer must be a concise, complete sentence that explicitly restates the year and uses the correct units).</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your perfect answer here"></textarea>
+            </div>
+
+            <!-- 1c -->
+            <div class="tw-mb-2">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">1c. Provide the <span class="hl-yellow">Supporting Facts</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Provide the verbatim supporting fact used to answer the prompt, as well as its exact location in the document.</p>
+              
+              <!-- Fact Block -->
+              <div class="tw-bg-gray-50 tw-p-4 tw-rounded-md tw-border tw-border-gray-300 tw-mb-4">
+                <div class="tw-flex tw-justify-between tw-items-center tw-mb-3">
+                  <h4 class="tw-font-bold tw-text-gray-800">Fact 1</h4>
+                </div>
+                <div class="tw-space-y-4">
+                  <div>
+                    <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1"><mark style="background-clip: content-box; background-color: #cdedf5; color: inherit" data-color="#cdedf5">Evidence (Verbatim Copy-Paste Only)</mark></label>
+                    <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" rows="3" placeholder="Paste exact text or table string here..."></textarea>
+                  </div>
+                  <div class="tw-flex tw-gap-4">
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Number</label>
+                      <input type="number" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. 42">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Section</label>
+                      <input type="text" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. Item 7. MD&A">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Element Type</label>
+                      <select class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-bg-white">
+                        <option>Paragraph</option>
+                        <option>Table</option>
+                        <option>Footnote</option>
+                        <option>Heading / Subheading</option>
+                        <option>List / Bullet Points</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="tw-relative tw-mb-6">
+          <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
+            <h3 class="tw-text-xl tw-font-bold tw-text-indigo-600 tw-mb-4">QUESTION 2: COMPLEX REASONING</h3>
+            
+            <!-- 2a -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">2a. Write Your <span class="hl-pink">Complex Prompt</span></h4>
+              <p class="tw-text-gray-700 tw-mb-2"><strong>Document Provided:</strong> <a href="#" class="tw-text-blue-600 hover:tw-underline">[Link to Meta Platforms Inc. Q3 2024 10-Q PDF]</a></p>
+              <p class="tw-text-gray-700 tw-mb-2">Using the provided document, write a <span class="hl-pink">Complex Prompt</span> whose answer cannot be retrieved directly from one sentence, table cell, or isolated passage. Your prompt must require financial reasoning, such as computing a number not explicitly stated, combining information from multiple parts of the document, applying financial or accounting logic, or using more than one of these skills together.</p>
+              <p class="tw-text-gray-700 tw-mb-3">Remember: The question must be strictly financial/accounting-related, fully grounded in the provided document, and have one clear correct answer.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your complex financial prompt here"></textarea>
+            </div>
+
+            <!-- 2b -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">2b. Provide the <span class="hl-purple">Perfect Answer</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Now answer the complex prompt you just wrote using the provided document. Your answer must be a concise, self-contained sentence that directly states the final result and clearly restates the relevant period, metric, and units when applicable.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your perfect answer here"></textarea>
+            </div>
+
+            <!-- 2c -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">2c. Provide the <span class="hl-yellow">Supporting Facts</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Provide the verbatim Supporting Facts used to answer the prompt, as well as their exact location in the document. Provide as many as necessary to fully support the <span class="hl-purple">Perfect Answer</span> and the <span class="hl-gray">Rationale</span> you will develop next.</p>
+              
+              <!-- Fact Block -->
+              <div class="tw-bg-gray-50 tw-p-4 tw-rounded-md tw-border tw-border-gray-300 tw-mb-4">
+                <div class="tw-flex tw-justify-between tw-items-center tw-mb-3">
+                  <h4 class="tw-font-bold tw-text-gray-800">Fact 1</h4>
+                </div>
+                <div class="tw-space-y-4">
+                  <div>
+                    <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1"><mark style="background-clip: content-box; background-color: #cdedf5; color: inherit" data-color="#cdedf5">Evidence (Verbatim Copy-Paste Only)</mark></label>
+                    <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" rows="3" placeholder="Paste exact text or table string here..."></textarea>
+                  </div>
+                  <div class="tw-flex tw-gap-4">
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Number</label>
+                      <input type="number" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. 42">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Section</label>
+                      <input type="text" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. Item 7. MD&A">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Element Type</label>
+                      <select class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-bg-white">
+                        <option>Paragraph</option>
+                        <option>Table</option>
+                        <option>Footnote</option>
+                        <option>Heading / Subheading</option>
+                        <option>List / Bullet Points</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="tw-mt-2 tw-bg-white tw-text-blue-600 tw-font-semibold tw-border tw-border-blue-600 tw-rounded-md tw-px-5 tw-py-2 hover:tw-bg-blue-50 tw-transition-colors">
+                + Add Fact
+              </button>
+            </div>
+
+            <!-- 2d -->
+            <div class="tw-mb-2">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">2d. <span class="hl-gray">Rationale</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Provide your reasoning and calculation memory. Spell out the formula you used, show the step-by-step arithmetic when calculation is required, and explain the financial logic used to connect the supporting facts to the final answer.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="5" placeholder="Write your rationale here"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="tw-relative tw-mb-6">
+          <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
+            <h3 class="tw-text-xl tw-font-bold tw-text-indigo-600 tw-mb-4">QUESTION 3: MULTI-DOC PROMPT CREATION</h3>
+            
+            <!-- 3a -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">3a. Write Your Prompt</h4>
+              <p class="tw-text-gray-700 tw-mb-2"><strong>Documents Provided:</strong></p>
+              <ol class="tw-list-disc tw-pl-5 tw-space-y-1 tw-text-blue-600 tw-mb-3">
+                <li><a href="#" class="hover:tw-underline">[Link to Document 1: Company W 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 2: Company X 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 3: Company Y 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 4: Company A 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 5: Company B 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 6: Company C 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 7: Company D 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 8: Company R 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 9: Company F 10-K]</a></li>
+                <li><a href="#" class="hover:tw-underline">[Link to Document 10: Company G 10-K]</a></li>
+              </ol>
+              <p class="tw-text-gray-700 tw-mb-3">Write a <span class="hl-pink">Complex Prompt</span> whose answer cannot be retrieved directly from one sentence, table cell, or isolated passage AND that absolutely utilizes ALL 10 provided SEC filings.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your multi-doc prompt here"></textarea>
+            </div>
+
+            <!-- 3b -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">3b. Provide the <span class="hl-purple">Perfect Answer</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Write a <span class="hl-purple">Perfect Answer</span> to the prior prompt you just created.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="3" placeholder="Write your perfect answer here"></textarea>
+            </div>
+
+            <!-- 3c -->
+            <div class="tw-mb-6">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">3c. Provide the <span class="hl-yellow">Supporting Facts</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Provide all the necessary verbatim supporting facts and their location on each document.</p>
+              
+              <!-- Fact Block -->
+              <div class="tw-bg-gray-50 tw-p-4 tw-rounded-md tw-border tw-border-gray-300 tw-mb-4">
+                <div class="tw-flex tw-justify-between tw-items-center tw-mb-3">
+                  <h4 class="tw-font-bold tw-text-gray-800">Fact 1</h4>
+                </div>
+                
+                <div class="tw-mb-4">
+                   <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Source Document</label>
+                   <select class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-bg-white">
+                     <option>Doc 1: Company W 10-K</option>
+                     <option>Doc 2: Company X 10-K</option>
+                     <option>Doc 3: Company Y 10-K</option>
+                     <option>Doc 4: Company A 10-K</option>
+                     <option>Doc 5: Company B 10-K</option>
+                     <option>Doc 6: Company C 10-K</option>
+                     <option>Doc 7: Company D 10-K</option>
+                     <option>Doc 8: Company R 10-K</option>
+                     <option>Doc 9: Company F 10-K</option>
+                     <option>Doc 10: Company G 10-K</option>
+                   </select>
+                </div>
+
+                <div class="tw-space-y-4">
+                  <div>
+                    <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1"><mark style="background-clip: content-box; background-color: #cdedf5; color: inherit" data-color="#cdedf5">Evidence (Verbatim Copy-Paste Only)</mark></label>
+                    <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" rows="3" placeholder="Paste exact text or table string here..."></textarea>
+                  </div>
+                  <div class="tw-flex tw-gap-4">
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Number</label>
+                      <input type="number" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. 42">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Page Section</label>
+                      <input type="text" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3" placeholder="e.g. Item 7. MD&A">
+                    </div>
+                    <div class="tw-flex-1">
+                      <label class="tw-block tw-font-semibold tw-text-gray-700 tw-mb-1">Element Type</label>
+                      <select class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-bg-white">
+                        <option>Paragraph</option>
+                        <option>Table</option>
+                        <option>Footnote</option>
+                        <option>Heading / Subheading</option>
+                        <option>List / Bullet Points</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="tw-mt-2 tw-bg-white tw-text-blue-600 tw-font-semibold tw-border tw-border-blue-600 tw-rounded-md tw-px-5 tw-py-2 hover:tw-bg-blue-50 tw-transition-colors">
+                + Add Fact
+              </button>
+            </div>
+
+            <!-- 3d -->
+            <div class="tw-mb-2">
+              <h4 class="tw-font-bold tw-text-gray-900 tw-mb-2">3d. <span class="hl-gray">Rationale</span></h4>
+              <p class="tw-text-gray-700 tw-mb-3">Provide your reasoning and calculation memory. Be sure to explicitly reference the document numbers and <span class="hl-yellow">Supporting Facts</span> in your step-by-step logic.</p>
+              <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800" rows="5" placeholder="Write your multi-doc rationale here"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="tw-bg-green-50 tw-p-4 tw-rounded-md tw-border tw-border-green-200 tw-mb-6">
+          <label class="tw-flex tw-items-center tw-cursor-pointer">
+            <input type="checkbox" class="tw-size-5 tw-mr-3 tw-accent-green-600 tw-cursor-pointer">
+            <span class="tw-font-bold tw-text-green-900">I have checked all my work and I am ready to submit my Qualification Task!</span>
+          </label>
+        </div>
+
+        <!-- Submit Buttons -->
+        <div class="tw-flex tw-justify-end tw-gap-4 tw-mb-10">
+            <button class="tw-bg-gray-200 tw-text-gray-700 tw-font-bold tw-px-6 tw-py-3 tw-rounded-md hover:tw-bg-gray-300 tw-transition-colors">Skip</button>
+            <button class="tw-bg-blue-600 tw-text-white tw-font-bold tw-px-6 tw-py-3 tw-rounded-md hover:tw-bg-blue-700 tw-transition-colors">Submit Task</button>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script>
+  (function () {
+    function makeH3Collapsible(h3, index) {
+      if (!h3 || h3.dataset.collapsibleReady === "true") {
+        return;
+      }
+
+      var parent = h3.parentElement;
+      if (!parent) {
+        return;
+      }
+
+      var content = document.createElement("div");
+      content.className = "collapsible-content";
+      content.id = "collapsible-h3-content-" + index;
+
+      var pointer = h3.nextElementSibling;
+      while (pointer && pointer.tagName !== "H3") {
+        var next = pointer.nextElementSibling;
+        content.appendChild(pointer);
+        pointer = next;
+      }
+
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "collapsible-h3";
+      button.setAttribute("aria-expanded", "true");
+      button.setAttribute("aria-controls", content.id);
+      button.innerHTML =
+        '<svg class="collapsible-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '<span>' + h3.innerHTML + "</span>";
+
+      button.addEventListener("click", function () {
+        var isExpanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        button.classList.toggle("is-collapsed", isExpanded);
+        content.hidden = isExpanded;
+      });
+
+      h3.innerHTML = "";
+      h3.appendChild(button);
+      h3.insertAdjacentElement("afterend", content);
+      h3.dataset.collapsibleReady = "true";
+    }
+
+    var allH3 = document.querySelectorAll("h3");
+    for (var i = 0; i < allH3.length; i += 1) {
+      makeH3Collapsible(allH3[i], i + 1);
+    }
+
+    function initSplitResize() {
+      var container = document.getElementById("split-layout");
+      var leftPane = document.getElementById("left-pane");
+      var rightPane = document.getElementById("right-pane");
+      var splitter = document.getElementById("pane-splitter");
+
+      if (!container || !leftPane || !rightPane || !splitter) {
+        return;
+      }
+
+      var minPaneWidthPx = 300;
+      var isDragging = false;
+
+      function resizeFromPointer(clientX) {
+        var containerRect = container.getBoundingClientRect();
+        var splitterWidth = splitter.getBoundingClientRect().width;
+        var availableWidth = containerRect.width - splitterWidth;
+        var minLeft = minPaneWidthPx;
+        var maxLeft = availableWidth - minPaneWidthPx;
+        var nextLeft = clientX - containerRect.left - splitterWidth / 2;
+
+        if (nextLeft < minLeft) {
+          nextLeft = minLeft;
+        }
+        if (nextLeft > maxLeft) {
+          nextLeft = maxLeft;
+        }
+
+        var leftPercent = (nextLeft / availableWidth) * 100;
+        var rightPercent = 100 - leftPercent;
+
+        leftPane.style.flexBasis = leftPercent + "%";
+        rightPane.style.flexBasis = rightPercent + "%";
+      }
+
+      splitter.addEventListener("pointerdown", function (event) {
+        isDragging = true;
+        splitter.setPointerCapture(event.pointerId);
+        document.body.style.cursor = "col-resize";
+        document.body.style.userSelect = "none";
+      });
+
+      splitter.addEventListener("pointermove", function (event) {
+        if (!isDragging) {
+          return;
+        }
+        resizeFromPointer(event.clientX);
+      });
+
+      function stopDragging(event) {
+        if (!isDragging) {
+          return;
+        }
+        isDragging = false;
+        document.body.style.cursor = "";
+        document.body.style.userSelect = "";
+        if (event && splitter.hasPointerCapture(event.pointerId)) {
+          splitter.releasePointerCapture(event.pointerId);
+        }
+      }
+
+      splitter.addEventListener("pointerup", stopDragging);
+      splitter.addEventListener("pointercancel", stopDragging);
+    }
+
+    initSplitResize();
+  })();
+</script>
+</body>
+</html>
+
+
