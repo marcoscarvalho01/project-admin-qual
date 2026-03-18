@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Project Midas — Admin Qualification Deliverables</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { prefix: 'tw-' }
+</script>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { display: flex; flex-direction: column; background-color: #f9fafb; }
+  .card-link {
+    display: block;
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+  .card-link:hover {
+    box-shadow: 0 4px 16px rgba(59,130,246,0.13);
+    border-color: #3b82f6;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15em 0.65em;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="tw-bg-blue-600 tw-px-6 tw-py-3 tw-flex tw-items-center tw-gap-3">
+  <span class="tw-text-white tw-font-bold tw-text-xl">DataAnnotation</span>
+  <span class="tw-text-blue-200 tw-text-sm tw-font-medium tw-pl-2 tw-border-l tw-border-blue-400">Project Midas — Admin Qualification</span>
+</div>
+
+<!-- Main -->
+<div class="tw-flex tw-flex-col tw-items-center tw-flex-1 tw-px-4 tw-py-12">
+  <div class="tw-w-full tw-max-w-2xl">
+
+    <!-- Header -->
+    <div class="tw-mb-8">
+      <h1 class="tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-2">Admin Qualification Deliverables</h1>
+      <p class="tw-text-gray-500 tw-text-sm tw-leading-relaxed">
+        This page contains the interactive form demos submitted as part of the
+        <span class="tw-font-semibold tw-text-gray-700">Project Midas — Admin Qualification Task</span>.
+        Each page is a functional mockup of how the task workflow would look on the platform,
+        built to illustrate the proposed form design and user experience.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="tw-space-y-4">
+
+      <!-- Qualification Form -->
+      <a href="qualification-form.html" class="card-link tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
+        <div class="tw-flex tw-items-start tw-justify-between tw-gap-4">
+          <div>
+            <div class="tw-flex tw-items-center tw-gap-2 tw-mb-1">
+              <span class="tw-text-base tw-font-bold tw-text-gray-900">Qualification Exam Form</span>
+              <span class="badge tw-bg-indigo-100 tw-text-indigo-700">Workers Selection</span>
+            </div>
+            <p class="tw-text-sm tw-text-gray-500 tw-leading-relaxed">
+              Mockup of the qualification exam shown to worker candidates. Covers all three question types:
+              simple retrieval (Cat. A), single-doc complex reasoning (Cat. B), and multi-document prompt creation (Cat. C).
+              Uses a resizable side-by-side layout with instructions on the left and the form on the right.
+            </p>
+          </div>
+          <svg class="tw-w-5 tw-h-5 tw-text-blue-400 tw-flex-shrink-0 tw-mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Task Form -->
+      <a href="task-form.html" class="card-link tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
+        <div class="tw-flex tw-items-start tw-justify-between tw-gap-4">
+          <div>
+            <div class="tw-flex tw-items-center tw-gap-2 tw-mb-1">
+              <span class="tw-text-base tw-font-bold tw-text-gray-900">Main Task Form</span>
+              <span class="badge tw-bg-blue-100 tw-text-blue-700">Cat. A &amp; B</span>
+            </div>
+            <p class="tw-text-sm tw-text-gray-500 tw-leading-relaxed">
+              Mockup of the production task form for Categories A and B (single-file questions).
+              Demonstrates the step-by-step progressive disclosure workflow — each step is revealed
+              only after the worker confirms the previous one — along with the SEC filing URL input,
+              PDF upload, prompt writing, answer, supporting facts, and rationale fields.
+            </p>
+          </div>
+          <svg class="tw-w-5 tw-h-5 tw-text-blue-400 tw-flex-shrink-0 tw-mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Footer note -->
+    <p class="tw-text-xs tw-text-gray-400 tw-mt-8">
+      Submitted by Marcos Vinícius Costa de Carvalho &middot; Worker ID: NYXCYPFPXGWW &middot; Project Midas Admin Qualification
+    </p>
+
+  </div>
+</div>
+
+</body>
+</html>
