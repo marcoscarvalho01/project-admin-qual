@@ -167,7 +167,8 @@
       <div class="tw-my-2 tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-6 gondor-wysiwyg">
         
         <h3 class="tw-text-blue-700">PROJECT OVERVIEW</h3>
-        <p>Welcome to project Midas!</p>
+        <p>Welcome (back) to Project Midas 🪙!</p>
+        <p><b>IF YOU PREVIOUSLY WORKED IN A MIDAS PROJECT, <span class="hl-critical">PLEASE FULLY RE-READ THE INSTRUCTIONS, AS THIS IS A VERY DIFFERENT PROJECT</b></span></p>
         <p>The goal of this project is to create a <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">Golden Dataset</mark> that will be used to evaluate how well models perform on answering document-based questions.</p>
         <p>Your goal in this task is to write a factual, financial-related prompt based on multiple 10-K/10-Q SEC filings from pre-assigned companies, answer the prompt you've created, and write the supporting facts from the documents. A typical task workflow will be:</p>
         <ol>
@@ -249,33 +250,7 @@
           <li>Would a financial professional get this right while a non-specialist might make a mistake?</li>
         </ul>
         <p>If you answered yes to these, that's a top-tier <span class="hl-pink">Complex Prompt</span>!</p>
-
-        <h3 class="tw-text-blue-700">PROMPT EXAMPLES</h3>
-        <p>In the table below there are some examples of good and bad multi-document complex prompts. Feel free to refer to them before you write your prompt:</p>
-
-        <table class="da-table">
-          <thead>
-            <tr>
-              <th>Category & Definition</th>
-              <th><span style="color: rgb(226, 49, 77);"><strong>X BAD Examples (Why they fail)</strong></span></th>
-              <th><span style="color: rgb(19, 154, 49);"><strong>GOOD Examples (Why they work)</strong></span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong><span class="hl-pink">Complex Prompts (Multi-Doc)</span></strong><br><br>Requires combining facts from multiple documents, inferring context, comparing entities, or doing cross-filing math.</td>
-              <td>
-                1. "What was Microsoft's cloud revenue, and what was Apple's total revenue?"<br>(This is just two simple prompts glued together. No math or reasoning required).<br><br>
-                2. "Based on the 10-Ks, what was Apple's gross margin?"<br>(Fails to utilize the second document (e.g. Microsoft) entirely).
-              </td>
-              <td>
-                1. "Based on their respective FY2023 10-Ks, what is the absolute difference in dollar amount between Microsoft's 'Intelligent Cloud' operating income and Apple's 'Services' operating income?"<br>(Requires finding a specific figure in Document 1, a specific figure in Document 2, and calculating the delta).<br><br>
-                2. "Combining the data from Pfizer and Johnson & Johnson's FY2023 10-Ks, what was their consolidated expenditure on Research and Development?"<br>(Requires extracting R&D from both filings and summing them up).
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
+        
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">WRITING PERFECT ANSWERS</h3>
