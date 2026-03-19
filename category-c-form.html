@@ -311,6 +311,121 @@
 
         <hr class="tw-my-6"/>
 
+        <div class="tw-mt-6 tw-space-y-4">
+          <h3 class="tw-text-blue-700">REFERENCE TABLES</h3>
+          <p class="tw-text-sm tw-text-gray-700 tw-mb-0">Open the sections below while you work. These examples are for quick reference during task completion.</p>
+
+          <details class="tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-p-4">
+            <summary class="tw-cursor-pointer tw-font-semibold tw-text-gray-900">PROMPT EXAMPLES</summary>
+            <div class="tw-overflow-x-auto tw-mt-3">
+              <table class="tw-min-w-full tw-text-sm tw-border-collapse">
+                <thead>
+                  <tr>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#10060; BAD Examples (Why they fail)</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#9989; GOOD Examples (Why they work)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">1. &quot;Compare the performance of Apple and Microsoft.&quot;<br><em>(Too vague, no clear metric, no specific period, and it does not force the worker to use more than one document in a traceable way.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">1. &quot;Using the FY2023 10-K filings for Apple, Microsoft, and Alphabet, what was each company's operating margin in 2023, and which company reported the highest operating margin for that year?&quot;<br><em>(Requires extracting operating income and revenue from three different filings, computing three margins, and then ranking them to identify the top performer.)</em></td>
+                  </tr>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">2. &quot;What was Tesla's total revenue in 2024 and 2023?&quot;<br><em>(This can be solved with a single document, and it is just two simple prompts in one, with no multi-doc reasoning.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">2. &quot;Based on the FY2023 10-K filings for JPMorgan Chase and Bank of America, what was the combined allowance for credit losses as a percentage of their combined total loans at year-end 2023?&quot;<br><em>(Requires pulling allowance and loan balances from two filings, aggregating them, and then computing a ratio across both institutions.)</em></td>
+                  </tr>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">3. &quot;Did Meta and Alphabet both grow revenue in 2024?&quot;<br><em>(Binary yes/no question, very shallow reasoning; it technically touches two filings but does not require combining or computing anything.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">3. &quot;Using the FY2023 10-K filings for Tesla, General Motors, and Ford, what was the total R&amp;D expense across the three companies in 2023, and what percentage of that combined R&amp;D was contributed by Tesla?&quot;<br><em>(Requires summing R&amp;D from three filings and then computing Tesla's share as a percentage of the combined total.)</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-p-4">
+            <summary class="tw-cursor-pointer tw-font-semibold tw-text-gray-900">ANSWER EXAMPLES</summary>
+            <div class="tw-overflow-x-auto tw-mt-3">
+              <table class="tw-min-w-full tw-text-sm tw-border-collapse">
+                <thead>
+                  <tr>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">The Question</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#10060; BAD Answers (Why they fail)</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#9989; PERFECT Answers (Why they work)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for Apple, Microsoft, and Alphabet, what was each company's operating margin in 2023, and which company reported the highest operating margin for that year?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Apple 29.8%, Microsoft 41.8%, Alphabet 27.4%.&quot; <em>(Fails: Not a complete sentence, does not restate the year, and does not clearly identify which company had the highest margin.)</em><br><br>&quot;I checked all three filings and Microsoft seems to have the best margin.&quot; <em>(Vague wording, no actual figures, and no precise final answer.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Based on the FY2023 10-K filings, Apple's operating margin in 2023 was 29.8%, Microsoft's operating margin was 41.8%, and Alphabet's operating margin was 27.4%, with Microsoft reporting the highest operating margin among the three companies in 2023.&quot; <em>(Complete, standalone, explicit about the period, and clearly identifies the cross-document conclusion.)</em></td>
+                  </tr>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for JPMorgan Chase and Bank of America, what was the combined allowance for credit losses as a percentage of their combined total loans at year-end 2023?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;About 1.9% after adding the numbers from both banks.&quot; <em>(Fails: Informal, imprecise, and not self-contained.)</em><br><br>&quot;The ratio is 1.9%, calculated by summing both allowances and dividing by loans.&quot; <em>(Fails: Incomplete sentence style and does not restate the metric or period.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;At year-end 2023, the combined allowance for credit losses of JPMorgan Chase and Bank of America represented 1.9% of their combined total loans.&quot; <em>(Works: Single precise sentence, explicit period, exact metric, and correct final format.)</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-p-4">
+            <summary class="tw-cursor-pointer tw-font-semibold tw-text-gray-900">SUPPORTING FACTS EXAMPLES</summary>
+            <div class="tw-overflow-x-auto tw-mt-3">
+              <table class="tw-min-w-full tw-text-sm tw-border-collapse">
+                <thead>
+                  <tr>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">The Question</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#10060; BAD Supporting Facts (Why they fail)</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#9989; PERFECT Supporting Facts (Why they work)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for Apple, Microsoft, and Alphabet, what was each company's operating margin in 2023, and which company reported the highest operating margin for that year?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2"><strong>Fact 1:</strong> &quot;Apple had strong profitability in 2023.&quot; <em>(Fails: paraphrased, non-verbatim, and not tied to the exact metric needed.)</em><br><strong>Fact 2:</strong> &quot;Microsoft operating income and revenue are in the income statement.&quot; <em>(Fails: no actual evidence and no location.)</em><br><strong>Fact 3:</strong> &quot;Alphabet's margin was lower.&quot; <em>(Fails: this is a conclusion, not evidence.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2"><strong>Fact 1 - Doc 1 (Apple):</strong> &quot;Operating income 114,301 Net sales 383,285 [Consolidated Statements of Operations, 2023]&quot;<br><strong>Page Number:</strong> 31<br><strong>Page Section:</strong> Consolidated Statements of Operations<br><strong>Element Type:</strong> Table<br><strong>Fact 2 - Doc 2 (Microsoft):</strong> &quot;Operating income 88,523 Revenue 211,915 [Income Statement, 2023]&quot;<br><strong>Page Number:</strong> 47<br><strong>Page Section:</strong> Consolidated Statements of Income<br><strong>Element Type:</strong> Table<br><strong>Fact 3 - Doc 3 (Alphabet):</strong> &quot;Income from operations 84,293 Revenues 307,394 [Consolidated Statements of Income, 2023]&quot;<br><strong>Page Number:</strong> 63<br><strong>Page Section:</strong> Consolidated Statements of Income<br><strong>Element Type:</strong> Table<br><em>(Works: Each fact is tied to one document, uses verbatim-style evidence with bracketed table context, and provides the exact inputs needed to calculate and compare the three margins.)</em></td>
+                  </tr>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for JPMorgan Chase and Bank of America, what was the combined allowance for credit losses as a percentage of their combined total loans at year-end 2023?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2"><strong>Fact 1:</strong> &quot;JPMorgan allowance for credit losses was reported in the annual report.&quot; <em>(Fails: vague and non-verbatim.)</em><br><strong>Fact 2:</strong> &quot;Bank of America had over $1 trillion in loans.&quot; <em>(Fails: rounded and incomplete.)</em><br><strong>Fact 3:</strong> &quot;The combined ratio was about 1.9%.&quot; <em>(Fails: this is the final answer, not evidence.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2"><strong>Fact 1 - Doc 1 (JPMorgan Chase):</strong> &quot;Allowance for credit losses 30,862 Total loans 1,323,480 [Balance Sheet / Credit Data, 2023]&quot;<br><strong>Page Number:</strong> 198<br><strong>Page Section:</strong> Consolidated Balance Sheets / Credit Risk Disclosures<br><strong>Element Type:</strong> Table<br><strong>Fact 2 - Doc 2 (Bank of America):</strong> &quot;Allowance for loan and lease losses 14,332 Total loans and leases 1,045,747 [Credit Quality / Balance Sheet, 2023]&quot;<br><strong>Page Number:</strong> 122<br><strong>Page Section:</strong> Notes to Consolidated Financial Statements - Credit Risk<br><strong>Element Type:</strong> Table<br><em>(Works: The evidence provides the exact numerator and denominator inputs from each filing, preserving full document-level traceability and allowing the combined ratio to be reproduced exactly.)</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-p-4">
+            <summary class="tw-cursor-pointer tw-font-semibold tw-text-gray-900">RATIONALE EXAMPLES</summary>
+            <div class="tw-overflow-x-auto tw-mt-3">
+              <table class="tw-min-w-full tw-text-sm tw-border-collapse">
+                <thead>
+                  <tr>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">The Question</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#10060; BAD Rationales (Why they fail)</th>
+                    <th class="tw-text-left tw-align-top tw-border tw-border-gray-300 tw-p-2">&#9989; PERFECT Rationales (Why they work)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for Apple, Microsoft, and Alphabet, what was each company's operating margin in 2023, and which company reported the highest operating margin for that year?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;I divided operating income by revenue for each company and Microsoft had the highest margin. Apple was 29.8%, Microsoft was 41.8%, and Alphabet was 27.4%.&quot; <em>(Fails: does not spell out the formula, does not reference the supporting facts by document, and does not show the intermediate arithmetic.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Formula: Operating Margin = Operating Income / Revenue. Using Fact 1 from Doc 1, Apple = 114,301 / 383,285 = 0.2982 = 29.8%; using Fact 2 from Doc 2, Microsoft = 88,523 / 211,915 = 0.4177 = 41.8%; using Fact 3 from Doc 3, Alphabet = 84,293 / 307,394 = 0.2742 = 27.4%. Comparing the three computed margins, Microsoft reported the highest operating margin in 2023.&quot; <em>(Works: states the formula, shows the calculation steps, and ties each value back to a specific document and supporting fact.)</em></td>
+                  </tr>
+                  <tr>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Using the FY2023 10-K filings for JPMorgan Chase and Bank of America, what was the combined allowance for credit losses as a percentage of their combined total loans at year-end 2023?&quot;</td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;I added the two allowances, added the two loan balances, and divided them to get 1.9%.&quot; <em>(Fails: too vague, no formula, no traceability, and no reproducible arithmetic.)</em></td>
+                    <td class="tw-align-top tw-border tw-border-gray-300 tw-p-2">&quot;Formula: Combined allowance ratio = (JPMorgan Chase allowance for credit losses + Bank of America allowance for loan and lease losses) / (JPMorgan Chase total loans + Bank of America total loans and leases). Using Fact 1 from Doc 1 and Fact 2 from Doc 2: (30,862 + 14,332) / (1,323,480 + 1,045,747) = 45,194 / 2,369,227 = 0.0191 = 1.9%. Therefore, at year-end 2023, the combined allowance for credit losses represented 1.9% of the two banks' combined total loans.&quot; <em>(Works: full formula, clear aggregation, document-by-document traceability, and exact arithmetic.)</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+
+        <hr class="tw-my-6"/>
         <h3 class="tw-text-blue-700">TIME TO START YOUR TASK!</h3>
         <p>That's it! You are now ready to produce high-quality Factual Prompts, Perfect Answers, Supporting Facts and great Rationales! Your task assignment starts on the top right corner of this page!</p>
         <p>If you have any questions during this task, you may use the Project Chat at the bottom of this page, where Admins can respond promptly.</p>
