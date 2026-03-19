@@ -169,7 +169,7 @@
         <h3 class="tw-text-blue-700">PROJECT OVERVIEW</h3>
         <p>Welcome to project Midas!</p>
         <p>The goal of this project is to create a <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">Golden Dataset</mark> that will be used to evaluate how well models perform on answering document-based questions.</p>
-        <p>Your goal in this task is to write a factual, financial-related prompt based on a 10-K/10-Q SEC filing from a pre-assigned company, answer the prompt you've created and write the supporting facts from the document. A typical project workflow will be:</p>
+        <p>Your goal in this task is to write a factual, finance-related prompt based on a 10-K/10-Q SEC filing from a pre-assigned company, answer the prompt you've created and write the supporting facts from the document. A typical project workflow will be:</p>
         <ol>
           <li>Select a company that belongs to your pre-assigned industry segment</li>
           <li>Select ONE 10-K OR 10-Q from the company you chose and download it and upload it here.</li>
@@ -183,12 +183,12 @@
           <li>Write all the <span class="hl-yellow">Supporting Facts</span> that were used to write your <span class="hl-purple">Perfect Answer</span> and their full <span class="hl-purple">Location</span> in the document.</li>
           <li>Write a <span class="hl-purple">Rationale</span> to provide all steps taken to get to your <span class="hl-purple">Perfect Answer</span>.</li>
         </ol>
-        <p>Detailed instructions for each step of the tasks will be provided below. If this is your first time working on this project you MUST READ THROUGH ALL THE INSTRUCTIONS carefully. Quality is the most important aspect of this project, and you can log the time taken to understand the task, so please read the entire instructions. Submitting low-quality tasks or failing to follow instructions are grounds for removal from this project!</p>
+        <p>Detailed instructions for each step of the tasks will be provided below. If this is your first time working on this project, you MUST READ THROUGH ALL THE INSTRUCTIONS carefully. Quality is the most important aspect of this project, and you may log the time taken to understand the task, so please read all the instructions. Submitting low-quality tasks or failing to follow instructions is grounds for removal from this project!</p>
 
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">GROUND RULES</h3>
-        <p><span class="hl-critical">NO EXTERNAL LLM IS ALLOWED</span> to assist, assist with or generate ANY portion of this task. Do not use any LLMs or chatbot tools (e.g., ChatGPT, Gemini, Claude, Perplexity, local LLMs, etc) to help you. If we wanted LLM generated content we wouldn't be asking you to work on this task in the first place. We value your expertise and careful work in developing high-quality prompt-response pairs!</p>
+        <p><span class="hl-critical">NO EXTERNAL LLM IS ALLOWED</span> to assist, assist with or generate ANY portion of this task. Do not use any LLMs or chatbot tools (e.g., ChatGPT, Gemini, Claude, Perplexity, local LLMs, etc) to help you. If we wanted LLM-generated content we wouldn't be asking you to work on this task in the first place. We value your expertise and careful work in developing high-quality prompt-response pairs!</p>
         <p><span style="color: rgb(226, 49, 77);">Any LLM usage is grounds for removal from this project AND from DataAnnotation. We have ways to detect this; it's not worth the risk!</span></p>
         <p><span class="hl-critical">VERY IMPORTANT:</span> ONLY USE SEC FILINGS PUBLISHED FROM <strong>OCTOBER 2023 OR MORE RECENT</strong>.</p>
         <p><span class="hl-critical">DO NOT INCLUDE ANY PERSONALLY IDENTIFIABLE INFORMATION (PII)</span> in ANY portion of your Prompt or Answer. SEC filings are public, heavily regulated documents that intentionally disclose the names, salaries, and backgrounds of top executives. Therefore, not all names are considered prohibited PII. The goal of this PII restriction is to prevent the AI from memorizing and later generating sensitive personal data of ordinary individuals or private contact information. Here is a breakdown of what's allowed or not:</p>
@@ -220,7 +220,7 @@
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">WRITING FACTUAL PROMPTS</h3>
-        <p>A good prompt is the heart of this project, so let's make sure yours is built to last! The goal here is to write the kind of financial-related rigorous question that a real analyst would ask before or while reviewing an SEC filing. It must be atomic, specific, grounded in the document, and with one clear correct answer (the <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5"><span class="hl-yellow">Ground Truth</span></mark>).</p>
+        <p>A good prompt is the heart of this project, so let's make sure yours is built to last! The goal here is to write the kind of finance-related rigorous question that a real analyst would ask before or while reviewing an SEC filing. It must be atomic, specific, grounded in the document, and with one clear correct answer (the <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5"><span class="hl-yellow">Ground Truth</span></mark>).</p>
         <p>Before we dive into the specifics, here are the rules that apply no matter what type of prompt you were assigned:</p>
         
         <h4>Your prompt MUST:</h4>
@@ -229,7 +229,7 @@
           <li><strong>Be strictly financial or accounting-based.</strong> Focus on revenues, margins, cash flows, debt structures, asset turnover, tax reconciliations, company/segment performance, not on opinions.</li>
           <li><strong>Be natural and realistic</strong>, as if you were asking a question to a fellow finance analyst.</li>
           <li><strong>Be grounded in the document</strong>, answerable using ONLY the SEC document you uploaded.</li>
-          <li><strong>Be factual</strong>, that is, ask for factual financial data, such as numbers, percentages, or accounting policies.</li>
+          <li><strong>Be factual</strong>, i.e., ask for factual financial data, such as numbers, percentages, or accounting policies.</li>
           <li><strong>Be specific enough</strong> that there is only one correct mathematical or accounting answer. Do not ask vague questions, such as "How did the company's finances perform?"</li>
         </ul>
 
@@ -241,7 +241,7 @@
           <li>Target any images. They must only target selectable texts, tables, paragraphs, etc.</li>
           <li>Include any personally identifiable information (PII). If your <span class="hl-yellow">Supporting Facts</span> somehow references a PII, you need to redact it. For example, if a citation includes a specific employee lawsuit, use placeholders like [Employee Name]. We highly recommend avoiding this situation, though!</li>
         </ul>
-        <p class="tw-text-red-600 tw-font-bold">This is especially important: <span class="hl-critical">UNDER ANY CIRCUMSTANCES, DO NOT RE-USE PROMPTS.</span> The purpose of this project is to create a high-quality DIVERSE data-set, so submissions from the same worker where the prompts are equal or very similar will be flagged as BAD and you will be removed from the project.</p>
+        <p class="tw-text-red-600 tw-font-bold">This is especially important: <span class="hl-critical">UNDER ANY CIRCUMSTANCES, DO NOT RE-USE PROMPTS.</span> The purpose of this project is to create a high-quality DIVERSE dataset, so submissions from the same worker where the prompts are equal or very similar will be flagged as BAD and you will be removed from the project.</p>
         <p>There are two types of prompts you might be assigned: <span class="hl-green">Simple Prompts</span> and <span class="hl-pink">Complex Prompts</span>. Your prompt must match the requirements of the one you were assigned. Carefully read the section below to better understand the difference between them.</p>
 
         <h3 class="tw-text-blue-700">SIMPLE PROMPTS</h3>
@@ -266,16 +266,16 @@
         
         <h4>What makes a great <span class="hl-pink">Complex Prompt</span>?</h4>
         <p>A great <span class="hl-pink">Complex Prompt</span> has a clear, singular correct answer, but requires genuine analytical effort to get there. The ideal question is one where a smart person without financial training would struggle, but a trained financial professional would solve it methodically.</p>
-        <p><mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">The complexity Test:</mark> Before submitting a <span class="hl-pink">Complex Prompt</span>, ask yourself:</p>
+        <p><mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">The complexity test:</mark> Before submitting a <span class="hl-pink">Complex Prompt</span>, ask yourself:</p>
         <ul>
           <li>Does answering this require reading at least two different parts of the document?</li>
           <li>Does it require performing a calculation that isn't already stated in the document?</li>
           <li>Would a financial professional get this right while a non-specialist might make a mistake?</li>
         </ul>
-        <p>If you answered yes to at least two of the three, that's a top-tier <span class="hl-pink">Complex Prompt</span>!</p>
+        <p>If you answered yes to at least two of these three, that's a top-tier <span class="hl-pink">Complex Prompt</span>!</p>
 
         <h3 class="tw-text-blue-700">PROMPT EXAMPLES</h3>
-        <p>In the table below there are some examples of good and bad prompts for each category. Feel free to refer to them before you write your prompt or whenever you are in doubt if your prompt fits the project's criteria:</p>
+        <p>The table below contains some examples of good and bad prompts for each category. Feel free to refer to them before you write your prompt or whenever you are unsure whether your prompt fits the project's criteria:</p>
 
         <table class="da-table">
           <thead>
@@ -335,7 +335,7 @@
           <span style="color: rgb(226, 49, 77);"><strong>❌ Bad:</strong></span> "The revenue was 45." (45 what? Dollars? Apples?)<br>
           <span style="color: rgb(19, 154, 49);"><strong>✅ Good:</strong></span> "The total revenue was $45 million." (or $45,000,000).</li>
           
-          <li><strong>Always try to ground your answer in time</strong><br>SEC filings compare multiple years of data (e.g., a 2023 10-K will also show 2022 and 2021 numbers). Even if your prompt mentions the year, your <span class="hl-purple">Perfect Answer</span> must explicitly restate the specific year, quarter, or date the data belongs to. This prevents the answer from becoming factually incorrect if read out of context (once again, it must be self-contained!).<br>
+          <li><strong>Always specify the relevant period explicitly</strong><br>SEC filings compare multiple years of data (e.g., a 2023 10-K will also show 2022 and 2021 numbers). Even if your prompt mentions the year, your <span class="hl-purple">Perfect Answer</span> must explicitly restate the specific year, quarter, or date the data belongs to. This prevents the answer from becoming factually incorrect if read out of context (once again, it must be self-contained!).<br>
           <span style="color: rgb(226, 49, 77);"><strong>❌ Bad:</strong></span> "The total R&D expense was $3.2 billion." (For which year? 2023? 2022?)<br>
           <span style="color: rgb(19, 154, 49);"><strong>✅ Good:</strong></span> "The total R&D expense for fiscal year 2023 was $3.2 billion."</li>
           
@@ -383,7 +383,7 @@
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">HOW TO PROVIDE SUPPORTING FACTS</h3>
-        <p>In the future, other raters will need to verify your answer WITHOUT HAVING TO READ THE ENTIRE SEC filing from scratch. Your <span class="hl-yellow">Supporting Facts</span> are the only available information they get. If you don't provide the <span class="hl-yellow">Supporting Facts</span>, the rater will not be able to fulfill their task!</p>
+        <p>In the future, other raters will need to verify your answer WITHOUT HAVING TO READ THE ENTIRE SEC filing from scratch. Your <span class="hl-yellow">Supporting Facts</span> are the only available information they will get. If you don't provide the <span class="hl-yellow">Supporting Facts</span>, the rater will not be able to fulfill their task!</p>
         <p>In the task workflow, you will see a specific form to fill out for each fact you need to prove your answer. You can add as many facts as you need by clicking the "Add" button. You will always need to fill the following fields:</p>
         
         <ol>
@@ -404,7 +404,7 @@
           </li>
         </ol>
         
-        <p><span class="hl-critical">IMPORTANT:</span> The amount of <span class="hl-yellow">Supporting Facts</span> will depend directly on the complexity of your prompts. If you received a <span class="hl-green">Simple Prompt</span> task, it will likely have a SINGLE Supporting Fact; If you received a <span class="hl-pink">Complex Prompt</span>, you will NECESSARILY have 2 or more <span class="hl-yellow">Supporting Facts</span>. Remember, you need to state EVERY SINGLE piece of information needed to answer your Prompt without depending on the document.</p>
+        <p><span class="hl-critical">IMPORTANT:</span> The amount of <span class="hl-yellow">Supporting Facts</span> will depend directly on the complexity of your prompts. If you received a <span class="hl-green">Simple Prompt</span> task, it will likely require a SINGLE Supporting Fact; If you received a <span class="hl-pink">Complex Prompt</span>, you will NECESSARILY have 2 or more <span class="hl-yellow">Supporting Facts</span>. Remember, you need to state EVERY SINGLE piece of information needed to answer your Prompt without depending on the document.</p>
 
         <h4>EXAMPLE OF A PERFECT SUPPORTING FACT FILLING</h4>
         <p><strong>Your Prompt:</strong><br>"Based on Apple's FY2025 10-K, what was the average annual revenue generated by the iPad segment over the three-year period from 2023 to 2025?"</p>
@@ -416,7 +416,7 @@
         Page Number: 24<br>
         Page Section: Item 7. Management's Discussion and Analysis (Net Sales by Product)<br>
         Element Type: Table</p>
-        <p>Though this is a <span class="hl-pink">Complex Prompt</span> (it needs to calculate an average based on several values), note how the worker only needed to pull ONE row from the Net Sales table to fully contain all numbers in a single evidence. This is OK. Also, note how the PDF copy-paste is messy and to clarify this they use brackets to map the column headers to the numbers in the exact order data points are shown.</p>
+        <p>Though this is a <span class="hl-pink">Complex Prompt</span> (it needs to calculate an average based on several values), note how the worker only needed to pull ONE row from the Net Sales table to include all numbers in a single evidence. This is OK. Also, note how the PDF copy-paste is messy and to clarify this they use brackets to map the column headers to the numbers in the exact order data points are shown.</p>
 
         <hr class="tw-my-6"/>
 
@@ -430,7 +430,7 @@
           <span style="color: rgb(226, 49, 77);"><strong>❌ Bad:</strong></span> "I divided 100 by 400 to get 25%." (Divided what by what?)<br>
           <span style="color: rgb(19, 154, 49);"><strong>✅ Good:</strong></span> "Gross Margin = (Total Revenue - Cost of Revenue) / Total Revenue."</li>
           
-          <li><strong>Show the Step-by-Step Math (Including Conversions)</strong><br>You must write down the actual arithmetic. The most common mistake we see is people messing up the decimals because SEC filings report in millions or thousands. If you had to convert units or move a decimal point to get a percentage, show it!<br>
+          <li><strong>Show the Step-by-Step Math (Including Conversions)</strong><br>You must write down the actual arithmetic. The most common mistake we see is people misplacing decimals because SEC filings report in millions or thousands. If you had to convert units or move a decimal point to get a percentage, show it!<br>
           <span style="color: rgb(226, 49, 77);"><strong>❌ Bad:</strong></span> "24,500 / 100,000 = 24.5%."<br>
           <span style="color: rgb(19, 154, 49);"><strong>✅ Good:</strong></span> "Step 1: 24,500 (Cost) / 100,000 (Revenue) = 0.245. Step 2: Convert to percentage = 24.5%"</li>
           
@@ -456,7 +456,7 @@
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">TIME TO START YOUR TASK!</h3>
-        <p>That's it! You are now ready to produce high-quality Factual Prompts, Perfect Answers, Supporting Facts and great Rationales! Your task assignment starts on the top right corner of this page!</p>
+        <p>That's it! You are now ready to produce high-quality Factual Prompts, Perfect Answers, Supporting Facts and great Rationales! Your task assignment starts in the top-right corner of this page!</p>
         <p>If you have any questions during this task, you may use the Project Chat at the bottom of this page, where Admins can respond promptly.</p>
         <p>Thanks for your hard work!</p>
 
@@ -477,10 +477,10 @@
               <li><strong>Your pre-assigned prompt type is:</strong> <span class="hl-pink">Complex Prompt</span></li>
               <li><strong>Your pre-assigned company is:</strong> Apple Inc.</li>
               <li><strong>Required Filing Type:</strong> 10-K or 10-Q</li>
-              <li><strong>Allowed Timeframe:</strong> Filings published from October 2023 or more recent.</li>
+              <li><strong>Allowed Timeframe:</strong> Filings published in or after October 2023.</li>
             </ul>
             <div class="tw-mt-4 tw-p-3 tw-bg-red-50 tw-rounded-md tw-border tw-border-red-100">
-              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or companies are grounds for removal from this project, so please, make sure to respect ALL of your assignments.</p>
+              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or companies is grounds for removal from this project, so please, make sure to respect ALL of your assignments.</p>
             </div>
           </div>
         </div>
@@ -491,11 +491,11 @@
             <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 1 - GET SEC FILING URL</h3>
             <ol class="tw-list-decimal tw-pl-4 tw-space-y-2 tw-text-gray-700 tw-mb-5">
               <li>To download your PDF, firstly, you must access the SEC website which is <a href="https://www.sec.gov/edgar/searchedgar/companysearch" class="tw-text-blue-600 hover:tw-underline" target="_blank">https://www.sec.gov/edgar/searchedgar/companysearch</a></li>
-              <li>Search for your Pre-assigned company <strong>Apple Inc.</strong></li>
+              <li>Search for your Pre-assigned company, Apple Inc <strong>Apple Inc.</strong></li>
               <img src="assets/images/step-1-2.png" alt="Search EDGAR for company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-my-3">
-              <li>Select one 10-K or 10-Q report of your choice that is published from October 2023 or more recent.</li>
+              <li>Select one 10-K or 10-Q report of your choice that is published in or after October 2023.</li>
               <img src="assets/images/step-1-3.png" alt="Search EDGAR for company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-my-3">
-              <li>Click "Menu" on the SEC page > Click "Open as HTML" and copy the URL link (you will need to paste this in the form below!).</li>
+              <li>Click "Menu" on the SEC page > Click "Open as HTML" and copy the URL (you will need to paste this in the form below!).</li>
               <img src="assets/images/step-1-4.png" alt="Search EDGAR for company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-my-3">
             </ol>
             <div class="tw-mt-2">
@@ -514,18 +514,18 @@
               <li>Right-click anywhere on the page of the HTML SEC page you got the URL from in the prior step > Click on "Save as" > Choose a file name and click "save".</li>
               <li>Now, open this external tool link: <a href="https://www.freeconvert.com/html-to-pdf" class="tw-text-blue-600 hover:tw-underline" target="_blank">https://www.freeconvert.com/html-to-pdf</a></li>
               <li>Click "Choose file" and select the HTML you saved on step 1.</li>
-              <li>Click on the gear Icon and select the same options as below</li>
+              <li>Click on the gear icon and select the same options as below</li>
               <img src="assets/images/step-2-4a.png" alt="Search EDGAR for company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-my-3">
               <img src="assets/images/step-2-4b.png" alt="Search EDGAR for company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-my-3">
               <li>Then, click "Convert" > Click Download</li>
             </ol>
             <div class="tw-space-y-4">
               <div>
-                <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-2">Please Upload the PDF file you just downloaded in the field below:</label>
+                <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-2">Please upload the PDF file you just downloaded in the field below:</label>
                 <input type="file" accept=".pdf" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-2 tw-text-gray-700 tw-bg-gray-50">
               </div>
               <div>
-                <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-2">Please include the date of Submission of your chosen SEC filing:</label>
+                <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-2">Please include the date of submission of your chosen SEC filing:</label>
                 <input type="date" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-700">
               </div>
             </div>
@@ -538,7 +538,7 @@
             <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 3 - WRITE YOUR PROMPT!</h3>
             <p class="tw-text-gray-700 tw-mb-2"><strong>Your Assignment: <span class="hl-pink">Complex Prompt</span></strong></p>
             <p class="tw-text-gray-700 tw-mb-2">Time to put your analyst hat on! Your goal is to write a single, complex factual financial question based on the document you just uploaded.</p>
-            <p class="tw-text-gray-700 tw-mb-2">A great <span class="hl-pink">Complex Prompt</span> is one whose answer requires using multiple parts/paragraphs from the report, or requires inferring information or computing numbers not readily available in the report</p>
+            <p class="tw-text-gray-700 tw-mb-2">A great <span class="hl-pink">Complex Prompt</span> is one whose answer requires using multiple sections or paragraphs from the report, or requires inferring information or computing numbers not readily available in the report</p>
             <p class="tw-text-gray-700 tw-mb-4"><strong>Remember:</strong> A great <span class="hl-pink">Complex Prompt</span> is one where a <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">smart person without financial training might struggle</mark>, but a trained analyst would solve it methodically!</p>
             
             <textarea class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-3 tw-text-gray-800 tw-mb-4" rows="4" placeholder="Write your prompt here..."></textarea>
@@ -549,7 +549,7 @@
                 <li><strong>It requires synthesis or math:</strong> The answer cannot just be copied from a single sentence or table cell. It must require the reader to calculate a number (like a margin or ratio), combine facts from multiple paragraphs, or apply financial logic.</li>
                 <li><strong>It has only one correct answer:</strong> Avoid asking for opinions, predictions, or "why" something happened unless the document explicitly states the reason.</li>
                 <li><strong>It is entirely self-contained:</strong> Do not reference outside news, stock prices, or other companies.</li>
-                <li><span style="color: rgb(226, 49, 77);"><strong>NO PII:</strong></span> Do not include the names of any non-executive employees or private individuals. If so, you are good to go and move to the next step!</li>
+                <li><span style="color: rgb(226, 49, 77);"><strong>NO PII:</strong></span> Do not include the names of any non-executive employees or private individuals. If so, you are ready to move to the next step!</li>
               </ul>
               <label class="tw-flex tw-items-center tw-cursor-pointer">
                 <input type="checkbox" class="tw-size-5 tw-mr-3 tw-accent-blue-600 tw-cursor-pointer">
@@ -562,7 +562,7 @@
         <!-- STEP 4 -->
         <div class="tw-relative tw-mb-6">
           <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
-            <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 4 - WRITE A GOLDEN ANSWER TO YOUR PROMPT!</h3>
+            <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 4 - WRITE A PERFECT ANSWER TO YOUR PROMPT!</h3>
             <p class="tw-text-gray-700 tw-mb-2">Remember: this is the ultimate "answer key" that AI models will be judged against. Write the exact, final answer to the prompt you just created.</p>
             <p class="tw-text-gray-700 tw-mb-4">Your answer should be exactly how you would want a highly competent fellow financial analyst to reply to your question.</p>
             
@@ -573,9 +573,9 @@
               <ul class="tw-list-disc tw-pl-5 tw-space-y-1 tw-text-sm tw-text-blue-800 tw-mb-4">
                 <li><strong>It is a complete, standalone sentence:</strong> The reader should understand the answer without needing to re-read your prompt.</li>
                 <li><strong>It is direct and concise:</strong> State the final number or fact immediately. Do not add conversational fluff or extra data that wasn't asked for.</li>
-                <li><strong>The units and dates are exact:</strong> If the number is in millions, write the unit down! Also, always explicitly state the year and/or quarter you are referencing in your answer.</li>
+                <li><strong>The units and dates are exact:</strong> If the number is in millions, state the unit explicitly! Also, always explicitly state the year and/or quarter you are referencing in your answer.</li>
                 <li><span style="color: rgb(226, 49, 77);"><strong>NO Math:</strong></span> Do not show your calculations or cite the page number in this box. (You will do that in the <span class="hl-purple">Rationale</span> and <span class="hl-yellow">Supporting Facts</span> sections next!).</li>
-                <li><span style="color: rgb(226, 49, 77);"><strong>NO Copy-Pasting:</strong></span> Write the answer in your own natural words. Do not just paste a giant, clunky legal paragraph from the SEC filing here.</li>
+                <li><span style="color: rgb(226, 49, 77);"><strong>NO Copy-Pasting:</strong></span> Write the answer in your own natural words. Do not paste a long, cumbersome legal paragraph from the SEC filing here.</li>
               </ul>
               <label class="tw-flex tw-items-center tw-cursor-pointer">
                 <input type="checkbox" class="tw-size-5 tw-mr-3 tw-accent-blue-600 tw-cursor-pointer">
@@ -674,7 +674,7 @@
         <div class="tw-relative tw-mb-6">
           <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
             <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 7 - THAT'S IT!</h3>
-            <p class="tw-text-gray-700 tw-mb-2">Before you submit your task, please, take your time to double check all previous answers. If everything is correct you can finish your task!</p>
+            <p class="tw-text-gray-700 tw-mb-2">Before you submit your task, please, take your time to double-check all previous answers. If everything is correct you can finish your task!</p>
             <p class="tw-text-gray-700 tw-mb-4">Thanks for your dedicated work</p>
             
             <div class="tw-bg-green-50 tw-p-4 tw-rounded-md tw-border tw-border-green-200">

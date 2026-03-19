@@ -168,9 +168,9 @@
         
         <h3 class="tw-text-blue-700">PROJECT OVERVIEW</h3>
         <p>Welcome (back) to Project Midas 🪙!</p>
-        <p><b>IF YOU PREVIOUSLY WORKED IN A MIDAS PROJECT, <span class="hl-critical">PLEASE FULLY RE-READ THE INSTRUCTIONS, AS THIS IS A VERY DIFFERENT PROJECT</b></span></p>
+        <p><b>IF YOU PREVIOUSLY WORKED IN A MIDAS PROJECT, <span class="hl-critical">PLEASE FULLY REREAD THE INSTRUCTIONS, AS THIS IS A VERY DIFFERENT PROJECT</b></span></p>
         <p>The goal of this project is to create a <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5">Golden Dataset</mark> that will be used to evaluate how well models perform on answering document-based questions.</p>
-        <p>Your goal in this task is to write a factual, financial-related prompt based on multiple 10-K/10-Q SEC filings from pre-assigned companies, answer the prompt you've created, and write the supporting facts from the documents. A typical task workflow will be:</p>
+        <p>Your goal in this task is to write a factual, finance-related prompt based on multiple SEC 10-K/10-Q filings from pre-assigned companies, answer the prompt you've created, and write the supporting facts from the documents. A typical task workflow will be:</p>
         <ol>
           <li>Review the pre-assigned companies that belong to your assigned industry segment.</li>
           <li>Select ONE 10-K OR 10-Q from <strong>EACH</strong> of the companies assigned to you, download them, and upload them here.</li>
@@ -179,12 +179,12 @@
           <li>Write all the <span class="hl-yellow">Supporting Facts</span> that were used to write your <span class="hl-purple">Perfect Answer</span>, tag exactly which document they belong to, and list their full <span class="hl-purple">Location</span> in the document.</li>
           <li>Write a <span class="hl-purple">Rationale</span> to provide all steps taken to get to your <span class="hl-purple">Perfect Answer</span>, explicitly referencing your sources.</li>
         </ol>
-        <p>Detailed instructions for each step of the tasks will be provided below. If this is your first time working on this project you MUST READ THROUGH ALL THE INSTRUCTIONS carefully. Quality is the most important aspect of this project, and you can log the time taken to understand the task, so please read the entire instructions. Submitting low-quality tasks or failing to follow instructions are grounds for removal from this project!</p>
+        <p>Detailed instructions for each step of the tasks will be provided below. If this is your first time working on this project, you MUST READ THROUGH ALL THE INSTRUCTIONS carefully. Quality is the most important aspect of this project, and you may log the time taken to understand the task, so please read all the instructions. Submitting low-quality tasks or failing to follow instructions is grounds for removal from this project!</p>
 
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">GROUND RULES</h3>
-        <p><span class="hl-critical">NO EXTERNAL LLM IS ALLOWED</span> to assist, assist with or generate ANY portion of this task. Do not use any LLMs or chatbot tools (e.g., ChatGPT, Gemini, Claude, Perplexity, local LLMs, etc) to help you. If we wanted LLM generated content we wouldn't be asking you to work on this task in the first place. We value your expertise and careful work in developing high-quality prompt-response pairs!</p>
+        <p><span class="hl-critical">NO EXTERNAL LLM IS ALLOWED</span> to assist, assist with or generate ANY portion of this task. Do not use any LLMs or chatbot tools (e.g., ChatGPT, Gemini, Claude, Perplexity, local LLMs, etc) to help you. If we wanted LLM-generated content, we wouldn't be asking you to work on this task in the first place. We value your expertise and careful work in developing high-quality prompt-response pairs!</p>
         <p><span style="color: rgb(226, 49, 77);">Any LLM usage is grounds for removal from this project AND from DataAnnotation. We have ways to detect this; it's not worth the risk!</span></p>
         <p><span class="hl-critical">VERY IMPORTANT:</span> ONLY USE SEC FILINGS PUBLISHED FROM <strong>OCTOBER 2023 OR MORE RECENT</strong>.</p>
         <p><span class="hl-critical">DO NOT INCLUDE ANY PERSONALLY IDENTIFIABLE INFORMATION (PII)</span> in ANY portion of your Prompt or Answer. SEC filings are public, heavily regulated documents that intentionally disclose the names, salaries, and backgrounds of top executives. Therefore, not all names are considered prohibited PII. The goal of your PII restriction is to prevent the AI from memorizing and later generating sensitive personal data of ordinary individuals or private contact information.</p>
@@ -216,7 +216,7 @@
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">WRITING FACTUAL PROMPTS</h3>
-        <p>A good prompt is the heart of this project, so let's make sure yours is built to last! The goal here is to write the kind of financial-related rigorous question that a real analyst would ask before or while reviewing an SEC filing. It must be atomic, specific, grounded in the document, and with one clear correct answer (the <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5"><span class="hl-yellow">Ground Truth</span></mark>).</p>
+        <p>A good prompt is the heart of this project, so let's make sure yours is built to last! The goal here is to write the kind of finance-related rigorous question that a real analyst would ask before or while reviewing an SEC filing. It must be atomic, specific, grounded in the document, and with one clear correct answer (the <mark style="background-clip: content-box; background-color: #efe7c5; color: inherit" data-color="#efe7c5"><span class="hl-yellow">Ground Truth</span></mark>).</p>
         
         <h4>Your prompt MUST:</h4>
         <ul>
@@ -224,7 +224,7 @@
           <li><strong>Be strictly financial or accounting-based.</strong> Focus on revenues, margins, cash flows, debt structures, asset turnover, tax reconciliations, company/segment performance, not on opinions.</li>
           <li><strong>Be natural and realistic</strong>, as if you were asking a question to a fellow finance analyst.</li>
           <li><strong>Be grounded in the documents</strong>, answerable using ONLY the SEC documents you uploaded.</li>
-          <li><strong>Be factual</strong>, that is, ask for factual financial data, such as numbers, percentages, or accounting policies.</li>
+          <li><strong>Be factual</strong>, i.e., ask for factual financial data, such as numbers, percentages, or accounting policies.</li>
           <li><strong>Be specific enough</strong> that there is only one correct mathematical or accounting answer. Do not ask vague questions, such as "How did the companies' finances perform?"</li>
         </ul>
 
@@ -236,7 +236,7 @@
           <li>Target any images. They must only target selectable texts, tables, paragraphs, etc.</li>
           <li>Include any personally identifiable information (PII).</li>
         </ul>
-        <p class="tw-text-red-600 tw-font-bold">This is especially important: <span class="hl-critical">UNDER ANY CIRCUMSTANCES, DO NOT RE-USE PROMPTS.</span> The purpose of this project is to create a high-quality DIVERSE data-set, so submissions from the same worker where the prompts are equal or very similar will be flagged as BAD and you will be removed from the project.</p>
+        <p class="tw-text-red-600 tw-font-bold">This is especially important: <span class="hl-critical">UNDER ANY CIRCUMSTANCES, DO NOT RE-USE PROMPTS.</span> The purpose of this project is to create a high-quality DIVERSE dataset, so submissions from the same worker where the prompts are equal or very similar will be flagged as BAD and you will be removed from the project.</p>
 
         <h3 class="tw-text-blue-700">MULTI-DOCUMENT COMPLEX PROMPTS</h3>
         <p>In this prompt category, you are exclusively writing <span class="hl-pink">Complex Prompts</span> that span across multiple documents. A <span class="hl-pink">Multi-Document Complex Prompt</span> is a question that requires extracting, inferring, and synthesizing information from at least two different sources to form a single calculation or analytical conclusion.</p>
@@ -269,14 +269,14 @@
           
           <li><strong>Be fanatical about units and formats</strong><br>SEC filings love to play tricks with units (e.g., writing "45" at the top of a table that says in millions). Your <span class="hl-purple">Perfect Answer</span> must state the true number with absolute clarity.</li>
           
-          <li><strong>Always try to ground your answer in time</strong><br>Even if your prompt mentions the year, your <span class="hl-purple">Perfect Answer</span> must explicitly restate the specific year, quarter, or date the data belongs to.</li>
+          <li><strong>Always specify the relevant period explicitly</strong><br>Even if your prompt mentions the year, your <span class="hl-purple">Perfect Answer</span> must explicitly restate the specific year, quarter, or date the data belongs to.</li>
         </ol>
         <p><em><span class="hl-critical">IMPORTANT:</span> By convention, for this project, any percentage data must be rounded to the nearest first decimal place and money figures must be rounded to the nearest integer.</em></p>
 
         <hr class="tw-my-6"/>
 
         <h3 class="tw-text-blue-700">HOW TO PROVIDE SUPPORTING FACTS</h3>
-        <p>In the future, other raters will need to verify your answer WITHOUT HAVING TO READ THE ENTIRE SEC filings from scratch. Your <span class="hl-yellow">Supporting Facts</span> are the only available information they get. If you don't provide the <span class="hl-yellow">Supporting Facts</span>, the rater will not be able to fulfill their task!</p>
+        <p>In the future, other raters will need to verify your answer WITHOUT HAVING TO READ THE ENTIRE SEC filings from scratch. Your <span class="hl-yellow">Supporting Facts</span> are the only available information they will get. If you don't provide the <span class="hl-yellow">Supporting Facts</span>, the rater will not be able to fulfill their task!</p>
         <p>In the task workflow, you will see a specific form to fill out for each fact you need to prove your answer. You can add as many facts as you need by clicking the "Add" button.</p>
 
         <h4>Multi-Document Mapping</h4>
@@ -427,7 +427,7 @@
 
         <hr class="tw-my-6"/>
         <h3 class="tw-text-blue-700">TIME TO START YOUR TASK!</h3>
-        <p>That's it! You are now ready to produce high-quality Factual Prompts, Perfect Answers, Supporting Facts and great Rationales! Your task assignment starts on the top right corner of this page!</p>
+        <p>That's it! You are now ready to produce high-quality Factual Prompts, Perfect Answers, Supporting Facts and great Rationales! Your task assignment starts in the top-right corner of this page!</p>
         <p>If you have any questions during this task, you may use the Project Chat at the bottom of this page, where Admins can respond promptly.</p>
         <p>Thanks for your hard work!</p>
 
@@ -448,10 +448,10 @@
               <li><strong>Your pre-assigned prompt type is:</strong> <span class="hl-pink">Multi-Document Complex Prompt</span></li>
               <li><strong>Your pre-assigned companies are:</strong> Apple Inc. (Document 1) & Microsoft Corp. (Document 2)</li>
               <li><strong>Required Filing Type:</strong> 10-K or 10-Q</li>
-              <li><strong>Allowed Timeframe:</strong> Filings published from October 2023 or more recent.</li>
+              <li><strong>Allowed Timeframe:</strong> Filings published in or after October 2023.</li>
             </ul>
             <div class="tw-mt-4 tw-p-3 tw-bg-red-50 tw-rounded-md tw-border tw-border-red-100">
-              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or missing documents are grounds for removal from this project, so please, make sure to respect ALL of your assignments.</p>
+              <p class="tw-text-red-700 tw-font-medium tw-text-sm tw-m-0">Incorrect prompt types or missing documents is grounds for removal from this project, so please, make sure to respect ALL of your assignments.</p>
             </div>
           </div>
         </div>
@@ -481,7 +481,7 @@
                   <input type="file" accept=".pdf" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-2 tw-text-gray-700 tw-bg-white">
                 </div>
                 <div>
-                  <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-1">Date of Submission</label>
+                  <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-1">date of submission</label>
                   <input type="date" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-2 tw-text-gray-700">
                 </div>
               </div>
@@ -500,7 +500,7 @@
                   <input type="file" accept=".pdf" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-2 tw-text-gray-700 tw-bg-white">
                 </div>
                 <div>
-                  <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-1">Date of Submission</label>
+                  <label class="tw-block tw-font-semibold tw-text-gray-800 tw-mb-1">date of submission</label>
                   <input type="date" class="input-base tw-w-full tw-rounded-md tw-border tw-border-gray-300 tw-p-2 tw-text-gray-700">
                 </div>
               </div>
@@ -540,7 +540,7 @@
         <!-- STEP 4 -->
         <div class="tw-relative tw-mb-6">
           <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
-            <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 4 - WRITE A GOLDEN ANSWER TO YOUR PROMPT!</h3>
+            <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 4 - WRITE A PERFECT ANSWER TO YOUR PROMPT!</h3>
             <p class="tw-text-gray-700 tw-mb-2">Remember: this is the ultimate "answer key" that AI models will be judged against. Write the exact, final answer to the prompt you just created.</p>
             <p class="tw-text-gray-700 tw-mb-4">Your answer should be exactly how you would want a highly competent fellow financial analyst to reply to your question.</p>
             
@@ -551,9 +551,9 @@
               <ul class="tw-list-disc tw-pl-5 tw-space-y-1 tw-text-sm tw-text-blue-800 tw-mb-4">
                 <li><strong>It is a complete, standalone sentence:</strong> The reader should understand the answer without needing to re-read your prompt.</li>
                 <li><strong>It is direct and concise:</strong> State the final number or fact immediately. Do not add conversational fluff or extra data that wasn't asked for.</li>
-                <li><strong>The units and dates are exact:</strong> If the number is in millions, write the unit down! Also, always explicitly state the year and/or quarter you are referencing in your answer.</li>
+                <li><strong>The units and dates are exact:</strong> If the number is in millions, state the unit explicitly! Also, always explicitly state the year and/or quarter you are referencing in your answer.</li>
                 <li><span style="color: rgb(226, 49, 77);"><strong>NO Math:</strong></span> Do not show your calculations or cite the page number in this box. (You will do that in the <span class="hl-purple">Rationale</span> and <span class="hl-yellow">Supporting Facts</span> sections next!).</li>
-                <li><span style="color: rgb(226, 49, 77);"><strong>NO Copy-Pasting:</strong></span> Write the answer in your own natural words. Do not just paste a giant, clunky legal paragraph from the SEC filing here.</li>
+                <li><span style="color: rgb(226, 49, 77);"><strong>NO Copy-Pasting:</strong></span> Write the answer in your own natural words. Do not paste a long, cumbersome legal paragraph from the SEC filing here.</li>
               </ul>
               <label class="tw-flex tw-items-center tw-cursor-pointer">
                 <input type="checkbox" class="tw-size-5 tw-mr-3 tw-accent-blue-600 tw-cursor-pointer">
@@ -662,7 +662,7 @@
         <div class="tw-relative tw-mb-6">
           <div class="tw-rounded-lg tw-bg-white tw-border tw-border-gray-200 tw-shadow-sm tw-px-6 tw-py-5">
             <h3 class="tw-text-lg tw-font-bold tw-text-gray-900 tw-mb-3">STEP 7 - THAT'S IT!</h3>
-            <p class="tw-text-gray-700 tw-mb-2">Before you submit your task, please, take your time to double check all previous answers. If everything is correct you can finish your task!</p>
+            <p class="tw-text-gray-700 tw-mb-2">Before you submit your task, please, take your time to double-check all previous answers. If everything is correct you can finish your task!</p>
             <p class="tw-text-gray-700 tw-mb-4">Thanks for your dedicated work</p>
             
             <div class="tw-bg-green-50 tw-p-4 tw-rounded-md tw-border tw-border-green-200">
